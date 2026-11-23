@@ -25,6 +25,9 @@
     <ClCompile Include="sources\main.cpp">
       <Filter>sources</Filter>
     </ClCompile>
+    <ClCompile Include="sources\game_manager.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\game_controller.hpp">
@@ -34,6 +37,9 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="headers\game_view.hpp">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\game_manager.hpp">
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>

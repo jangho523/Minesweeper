@@ -144,12 +144,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sources\game_controller.cpp" />
+    <ClCompile Include="sources\game_manager.cpp" />
     <ClCompile Include="sources\game_model.cpp" />
     <ClCompile Include="sources\game_view.cpp" />
     <ClCompile Include="sources\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\game_controller.hpp" />
+    <ClInclude Include="headers\game_manager.hpp" />
     <ClInclude Include="headers\game_model.hpp" />
     <ClInclude Include="headers\game_view.hpp" />
   </ItemGroup>
