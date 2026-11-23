@@ -111,6 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,18 +140,18 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="game_controller.cpp" />
-    <ClCompile Include="game_model.cpp" />
-    <ClCompile Include="game_view.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="game_controller.hpp" />
-    <ClInclude Include="game_model.hpp" />
-    <ClInclude Include="game_view.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\game_controller.cpp" />
+    <ClCompile Include="sources\game_model.cpp" />
+    <ClCompile Include="sources\game_view.cpp" />
+    <ClCompile Include="sources\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\game_controller.hpp" />
+    <ClInclude Include="headers\game_model.hpp" />
+    <ClInclude Include="headers\game_view.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
