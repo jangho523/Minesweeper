@@ -17,4 +17,43 @@ namespace Minesweeper {
             }
         }
 	}
+    void GameModel::calculateAdjacentMines() {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                board[i][j].adjacentMines = 0;
+
+                // Top Left
+                if (i > 0 && j > 0 && board[i - 1][j - 1].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Top
+                if (i > 0 && board[i - 1][j].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Top Right
+                if (i > 0 && j < cols - 1 && board[i - 1][j + 1].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Left
+                if (j > 0 && board[i][j - 1].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Right
+                if (j < cols - 1 && board[i][j + 1].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Bottom Left
+                if (i < rows - 1 && j > 0 && board[i + 1][j - 1].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Bottom
+                if (i < rows - 1 && board[i + 1][j].isMine)
+                    ++board[i][j].adjacentMines;
+
+                // Bottom Right
+                if (i < rows - 1 && j < cols - 1 && board[i + 1][j + 1].isMine)
+                    ++board[i][j].adjacentMines;
+            }
+        }
+    }
 }

@@ -20,6 +20,7 @@ namespace Minesweeper {
     class GameModel {
     public:
         void generateBoard();
+        void calculateAdjacentMines();
 
     private:
         int rows = 9;
