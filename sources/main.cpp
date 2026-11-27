@@ -1,16 +1,27 @@
 #include "raylib.h"
+#include "game_manager.hpp"
 
 int main()
 {
-    InitWindow(800, 600, "Minesweeper");
+    InitWindow(480, 480, "Minesweeper");
+    SetTargetFPS(60);
 
-    while (!WindowShouldClose())
-    {
+    Minesweeper::GameManager game;
+    game.init();
+
+    while (!WindowShouldClose()) {
+        game.update();
+
         BeginDrawing();
         ClearBackground(RAYWHITE);
+
+        game.draw();
+
         EndDrawing();
     }
 
+    game.shutdown();
     CloseWindow();
+
     return 0;
 }
